@@ -1,0 +1,262 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-11-09 15:11:10.588966",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "naming_series",
+  "challan_type",
+  "source_warehouse",
+  "column_break_3",
+  "challan_date",
+  "challan_time",
+  "target_warehouse",
+  "party_information_section",
+  "amended_from",
+  "party_type",
+  "party_code",
+  "column_break_13",
+  "party_name",
+  "instructed_by",
+  "items_section",
+  "delivery_challan_item",
+  "section_break_18",
+  "total_qty",
+  "column_break_20",
+  "net_total",
+  "tax_and_charges_section",
+  "tax_category",
+  "gst_rate",
+  "column_break_27",
+  "cgst_amount",
+  "sgst_amount",
+  "igst_amount",
+  "total_tax_and_charges",
+  "grand_total",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "default": "{challan_type}",
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "reqd": 1
+  },
+  {
+   "fieldname": "challan_type",
+   "fieldtype": "Select",
+   "label": "Challan Type",
+   "options": "Returnable\nNon-Returnable",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source_warehouse",
+   "fieldtype": "Link",
+   "label": "Source Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "challan_date",
+   "fieldtype": "Date",
+   "label": "Challan Date",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "challan_time",
+   "fieldtype": "Time",
+   "label": "Challan Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_warehouse",
+   "fieldtype": "Link",
+   "label": "Target Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "party_information_section",
+   "fieldtype": "Section Break",
+   "label": "Party Information"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Delivery Challan",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Select",
+   "label": "Party Type",
+   "options": "\nSupplier\nCustomer\nEmployee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "party_code",
+   "fieldtype": "Data",
+   "label": "Party Code"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Data",
+   "label": "Party Name"
+  },
+  {
+   "fieldname": "instructed_by",
+   "fieldtype": "Data",
+   "label": "Instructed By "
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "items_section",
+   "fieldtype": "Section Break",
+   "hide_border": 1,
+   "label": "Items",
+   "options": "fa fa-shopping-cart"
+  },
+  {
+   "fieldname": "delivery_challan_item",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Delivery Challan Item"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Data",
+   "label": "Total Qty"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "net_total",
+   "fieldtype": "Data",
+   "label": "Net Total"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "tax_and_charges_section",
+   "fieldtype": "Section Break",
+   "label": "Tax and Charges"
+  },
+  {
+   "fieldname": "tax_category",
+   "fieldtype": "Link",
+   "label": "Tax Category",
+   "options": "Tax Category"
+  },
+  {
+   "fieldname": "gst_rate",
+   "fieldtype": "Select",
+   "label": "GST Rate",
+   "options": "\n12\n18\n28"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cgst_amount",
+   "fieldtype": "Data",
+   "label": "CGST Amount"
+  },
+  {
+   "fieldname": "sgst_amount",
+   "fieldtype": "Data",
+   "label": "SGST Amount"
+  },
+  {
+   "fieldname": "igst_amount",
+   "fieldtype": "Data",
+   "label": "IGST Amount"
+  },
+  {
+   "fieldname": "total_tax_and_charges",
+   "fieldtype": "Data",
+   "label": "Total Tax and Charges"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Data",
+   "label": "Grand Total"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Delivery Challan",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "name"
+  }
+ ],
+ "max_attachments": 10,
+ "modified": "2022-11-09 15:11:10.588966",
+ "modified_by": "Administrator",
+ "module": "Gatepass",
+ "name": "Delivery Challan",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
