@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include gatepass *.css
+recursive-include gatepass *.csv
+recursive-include gatepass *.html
+recursive-include gatepass *.ico
+recursive-include gatepass *.js
+recursive-include gatepass *.json
+recursive-include gatepass *.md
+recursive-include gatepass *.png
+recursive-include gatepass *.py
+recursive-include gatepass *.svg
+recursive-include gatepass *.txt
+recursive-exclude gatepass *.pyc
