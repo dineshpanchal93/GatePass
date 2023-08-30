@@ -3,7 +3,6 @@
  "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2022-11-09 15:11:10.588966",
- "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -37,8 +36,7 @@
   "sgst_amount",
   "igst_amount",
   "total_tax_and_charges",
-  "grand_total",
-  "amended_from"
+  "grand_total"
  ],
  "fields": [
   {
@@ -55,7 +53,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Series",
-   "reqd": 1
+   "options": "DC-YYY-:"
   },
   {
    "fieldname": "challan_type",
@@ -111,15 +109,16 @@
   },
   {
    "fieldname": "party_type",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Party Type",
-   "options": "\nSupplier\nCustomer\nEmployee",
+   "options": "DocType",
    "reqd": 1
   },
   {
    "fieldname": "party_code",
-   "fieldtype": "Data",
-   "label": "Party Code"
+   "fieldtype": "Dynamic Link",
+   "label": "Party Code",
+   "options": "party_type"
   },
   {
    "fieldname": "column_break_13",
@@ -233,11 +232,10 @@
   }
  ],
  "max_attachments": 10,
- "modified": "2022-11-09 15:11:10.588966",
+ "modified": "2023-08-29 13:06:43.129239",
  "modified_by": "Administrator",
  "module": "Gatepass",
  "name": "Delivery Challan",
- "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -255,7 +253,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
  "track_changes": 1,
  "track_seen": 1,
  "track_views": 1
